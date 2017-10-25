@@ -178,7 +178,8 @@ var ConversationPanel = (function() {
               'children': [{
                 // <p>{messageText}</p>
                 'tagName': 'p',
-                'text': currentText
+                //'text': currentText
+                'text':[(isUser ? 'from-user' : 'from-watson'), 'お客様：'+currentText, 'カスタマセンター：'+currentText] 
               }]
             }]
           }]
