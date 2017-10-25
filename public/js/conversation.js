@@ -155,7 +155,8 @@ var ConversationPanel = (function() {
 
   // Constructs new DOM element from a message payload
   function buildMessageDomElements(newPayload, isUser) {
-    var textArray = isUser ? newPayload.input.text : newPayload.output.text;
+    //var textArray = isUser ? newPayload.input.text : newPayload.output.text;
+    var textArray = isUser ? 'お客様：'+newPayload.input.text : 'カスタマセンター：'+newPayload.output.text;
     if (Object.prototype.toString.call( textArray ) !== '[object Array]') {
       textArray = [textArray];
     }
@@ -179,7 +180,7 @@ var ConversationPanel = (function() {
                 // <p>{messageText}</p>
                 'tagName': 'p',
                 //'text': currentText
-                'text':[(isUser ? 'from-user' : 'from-watson'), 'お客様：'+currentText, 'カスタマセンター：'+currentText] 
+                'text': currentText
               }]
             }]
           }]
