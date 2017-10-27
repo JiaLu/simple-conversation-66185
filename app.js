@@ -60,15 +60,6 @@ app.post('/api/message', function(req, res) {
   });
 });
 
-//DEBUG
-app.get('/', function(req, res) {
-	return res.json({
-	      'output': {
-	        'text': 'GET TEST.'
-	      }
-	    });
-}
-
 /**
  * Updates the response text using the intent confidence
  * @param  {Object} input The request to the Conversation service
